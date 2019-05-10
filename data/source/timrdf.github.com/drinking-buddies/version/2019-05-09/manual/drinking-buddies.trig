@@ -1,0 +1,53 @@
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbp:   <http://dbpedia.org/resource/> .
+@prefix food:  <http://data.lirmm.fr/ontologies/food#> .
+@prefix bevon: <http://rdfs.co/bevon/> .
+@prefix gn:    <http://www.geonames.org/ontology#> .
+
+<https://github.com/timrdf/sparql-paths/wiki> {
+   <http://purl.org/twc/id/person/TimLebo> 
+      <tag:timrdf@gmail.com,2019-05-09:food/likes> 
+         <https://en.wikipedia.org/wiki/Upside-down_cake> .
+
+   <http://purl.org/twc/id/person/TimLebo> 
+      <tag:timrdf@gmail.com,2019-05-09:food/likes> 
+         <https://en.wikipedia.org/wiki/Upside-down_cake>,
+         <http://dbpedia.org/resource/Beer> .
+
+   <http://purl.org/twc/id/person/TimLebo> 
+      a <http://xmlns.com/foaf/0.1/Person>;
+      <http://xmlns.com/foaf/0.1/nick> "Tim";
+      <http://xmlns.com/foaf/0.1/knows> 
+         <http://kasei.us/about/foaf.xrdf#greg>,
+         <http://purl.org/twc/id/person/NicholasDelRio>;
+      <tag:timrdf@gmail.com,2019-05-09:food/likes> 
+         <https://en.wikipedia.org/wiki/Upside-down_cake>,
+         <http://dbpedia.org/resource/Beer> .
+
+   <http://kasei.us/about/foaf.xrdf#greg> 
+      a foaf:Person;
+      foaf:nick "Greg";
+      foaf:based_near 
+         dbp:California;
+      <tag:timrdf@gmail.com,2019-05-09:food/likes> 
+         dbp:Beer .
+
+   <http://purl.org/twc/id/person/NicholasDelRio> 
+      a foaf:Person;
+      foaf:nick "Nick";
+      foaf:based_near
+         dbp:New_York;
+      <tag:timrdf@gmail.com,2019-05-09:food/likes> 
+         dbp:Beer .
+
+   dbp:Beer rdfs:subClassOf bevon:AlcoholicBeverage .
+   dbp:Beer rdfs:subClassOf bevon:AlcoholicBeverage .
+   bevon:AlcoholicBeverage rdfs:subClassOf food:Food .
+   dbp:Upside-down_cake    rdfs:subClassOf food:Food .
+
+   dbp:New_York   gn:parentFeature <http://www.geonames.org/6252001/> .
+   dbp:California gn:parentFeature <http://www.geonames.org/6252001/> .
+
+   <http://www.geonames.org/6252001/> rdfs:label "United States"@en .
+}

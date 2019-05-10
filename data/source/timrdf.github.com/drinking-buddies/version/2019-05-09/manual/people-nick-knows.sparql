@@ -1,0 +1,6 @@
+prefix foaf: <http://xmlns.com/foaf/0.1/>
+select ?person ?nick ?friend
+where {
+    ?person a foaf:Person; foaf:nick ?nick;
+       foaf:knows ?friend .
+}
