@@ -1,0 +1,67 @@
+@prefix foaf:  <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbp:   <http://dbpedia.org/resource/> .
+@prefix food:  <http://data.lirmm.fr/ontologies/food#> .
+@prefix bevon: <http://rdfs.co/bevon/> .
+@prefix members: <https://ld.rl.af.mil/source/cop.di2e.net/dataset/team-members/version/2021-06-07/> .
+@prefix rda2:    <http://rdvocab.info/ElementsGr2/>.
+@prefix csjob: <https://jobs.localjobnetwork.com/job-descriptions/> .
+@prefix gn:    <http://www.geonames.org/ontology#> .
+
+<https://example.org/source/timrdf.github.com/dataset/drinking-buddies/version/2021-06-07> {
+members:AliyahCarter 
+      <http://purl.org/cerif/frapo/hasJobTitle>
+         csjob:computer-science-teacher-job-description,
+	 <https://en.wikipedia.org/wiki/Intern_(disambiguation)>,
+	 <https://simple.wikipedia.org/wiki/Tutor>,
+	 <https://en.wikipedia.org/wiki/Chief_information_officer> .
+
+
+	 members:AliyahCarter
+           <tag:aliyahzcarter@gmail.com,2019-05-09:activities/likes> 
+              <https://en.wikipedia.org/wiki/Roller_skating> ,
+	      <https://en.wikipedia.org/wiki/Fashion> ,
+              <https://en.wikipedia.org/wiki/Reading> ,
+	      <https://en.wikipedia.org/wiki/Community_service>,
+	      <http://dbpedia.org/resource/Beer>,
+	      <http://rdfs.co/bevon/Cocktail>,
+	      <http://rdfs.co/bevon/CarbonatedWater> .
+
+	 members:AliyahCarter
+	   <http://purl.org/net/soron/loves>
+	      <https://en.wikipedia.org/wiki/Jesus>,
+	      <https://en.wikipedia.org/wiki/Bible>,
+	      <https://en.wikipedia.org/wiki/Human>.
+
+ 	members:AliyahCarter
+	<http://caressesrobot.org/ontology#hasGoal>
+	    <https://en.wikipedia.org/wiki/Singing>,
+	    <https://en.wikipedia.org/wiki/Actress_(disambiguation)>,
+	    <https://en.wikipedia.org/wiki/Pastor>,
+	    <https://en.wikipedia.org/wiki/Evangelist#Religion>,
+	    <tag:aliyahzcarter@gmail.com,2021-02-10:PhdComputerScience>  .
+
+	members:AliyahCarter
+	   rda2:placeOfResidence
+              dbp:New_Jersey,
+	      dbp:New_York,
+	      dbp:Virginia,
+	      dbp:California,
+	      dbp:New_Mexico,
+	      dbp:South_Carolina,
+	      dbp:Florida .
+
+	dbp:New_York   gn:parentFeature <http://www.geonames.org/6252001/> .
+        dbp:California gn:parentFeature <http://www.geonames.org/6252001/> .
+	dbp:New_Jersey gn:parentFeature <http://www.geonames.org/6252001/> .
+        dbp:Virginia   gn:parentFeature <http://www.geonames.org/6252001/> .
+	dbp:New_Mexico gn:parentFeature <http://www.geonames.org/6252001/> .
+	dbp:South_Carolina   gn:parentFeature <http://www.geonames.org/6252001/> .
+        dbp:Florida gn:parentFeature <http://www.geonames.org/6252001/> .
+
+        <http://www.geonames.org/6252001/> rdfs:label "United States"@en .
+
+		
+            
+  
+}
